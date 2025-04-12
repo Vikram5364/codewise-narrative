@@ -24,6 +24,33 @@ export const topics: Topic[] = [
         duration: 10,
         difficulty: 'Beginner',
         tags: ['arrays', 'operations']
+      },
+      {
+        id: 'array-searching',
+        title: 'Searching in Arrays',
+        description: 'Learn about linear and binary search algorithms for arrays.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 12,
+        difficulty: 'Beginner',
+        tags: ['arrays', 'searching', 'algorithms']
+      },
+      {
+        id: 'array-sorting',
+        title: 'Sorting Arrays',
+        description: 'Introduction to basic sorting algorithms for arrays.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 15,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'sorting', 'algorithms']
+      },
+      {
+        id: 'multidimensional-arrays',
+        title: 'Multidimensional Arrays',
+        description: 'Working with 2D and 3D arrays and their applications.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'multidimensional', 'advanced']
       }
     ]
   },
@@ -50,6 +77,24 @@ export const topics: Topic[] = [
         duration: 12,
         difficulty: 'Beginner',
         tags: ['linked-lists', 'operations']
+      },
+      {
+        id: 'doubly-linked-lists',
+        title: 'Doubly Linked Lists',
+        description: 'Understanding doubly linked lists and their implementation.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 11,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'doubly-linked']
+      },
+      {
+        id: 'circular-linked-lists',
+        title: 'Circular Linked Lists',
+        description: 'Understanding circular linked lists and their applications.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 10,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'circular']
       }
     ]
   },
@@ -76,6 +121,33 @@ export const topics: Topic[] = [
         duration: 14,
         difficulty: 'Intermediate',
         tags: ['trees', 'binary-trees']
+      },
+      {
+        id: 'binary-search-trees',
+        title: 'Binary Search Trees',
+        description: 'Learn about binary search trees and their operations.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 15,
+        difficulty: 'Intermediate',
+        tags: ['trees', 'binary-search-trees']
+      },
+      {
+        id: 'avl-trees',
+        title: 'AVL Trees',
+        description: 'Understanding self-balancing AVL trees and rotations.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 18,
+        difficulty: 'Advanced',
+        tags: ['trees', 'avl', 'balanced']
+      },
+      {
+        id: 'red-black-trees',
+        title: 'Red-Black Trees',
+        description: 'Understanding red-black trees and their implementation.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 20,
+        difficulty: 'Advanced',
+        tags: ['trees', 'red-black', 'balanced']
       }
     ]
   },
@@ -102,6 +174,24 @@ export const topics: Topic[] = [
         duration: 15,
         difficulty: 'Intermediate',
         tags: ['graphs', 'algorithms']
+      },
+      {
+        id: 'shortest-path-algorithms',
+        title: 'Shortest Path Algorithms',
+        description: 'Learn Dijkstra\'s and Bellman-Ford algorithms for finding shortest paths.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 18,
+        difficulty: 'Advanced',
+        tags: ['graphs', 'algorithms', 'shortest-path']
+      },
+      {
+        id: 'minimum-spanning-trees',
+        title: 'Minimum Spanning Trees',
+        description: 'Understanding Prim\'s and Kruskal\'s algorithms for MST.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 17,
+        difficulty: 'Advanced',
+        tags: ['graphs', 'algorithms', 'mst']
       }
     ]
   },
@@ -128,6 +218,15 @@ export const topics: Topic[] = [
         duration: 12,
         difficulty: 'Intermediate',
         tags: ['hash-tables', 'advanced']
+      },
+      {
+        id: 'hash-maps',
+        title: 'Hash Maps and Their Applications',
+        description: 'Understanding hash maps and their practical applications.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 13,
+        difficulty: 'Intermediate',
+        tags: ['hash-tables', 'hash-maps', 'applications']
       }
     ]
   },
@@ -147,13 +246,49 @@ export const topics: Topic[] = [
         tags: ['sorting', 'algorithms']
       },
       {
+        id: 'selection-sort',
+        title: 'Selection Sort',
+        description: 'Learn about selection sort algorithm and its implementation.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 10,
+        difficulty: 'Beginner',
+        tags: ['sorting', 'algorithms']
+      },
+      {
+        id: 'insertion-sort',
+        title: 'Insertion Sort',
+        description: 'Learn about insertion sort algorithm and its implementation.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 11,
+        difficulty: 'Beginner',
+        tags: ['sorting', 'algorithms']
+      },
+      {
+        id: 'merge-sort',
+        title: 'Merge Sort',
+        description: 'Understanding the divide-and-conquer merge sort algorithm.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['sorting', 'algorithms', 'divide-and-conquer']
+      },
+      {
         id: 'quick-sort',
         title: 'Quick Sort',
         description: 'Learn about the quick sort algorithm and its implementation.',
         videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
         duration: 15,
         difficulty: 'Intermediate',
-        tags: ['sorting', 'algorithms']
+        tags: ['sorting', 'algorithms', 'divide-and-conquer']
+      },
+      {
+        id: 'heap-sort',
+        title: 'Heap Sort',
+        description: 'Learning heap sort and its connection to heap data structure.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 16,
+        difficulty: 'Advanced',
+        tags: ['sorting', 'algorithms', 'heaps']
       }
     ]
   },
@@ -180,6 +315,59 @@ export const topics: Topic[] = [
         duration: 18,
         difficulty: 'Advanced',
         tags: ['dp', 'techniques']
+      },
+      {
+        id: 'tabulation',
+        title: 'Tabulation Techniques',
+        description: 'Learn about bottom-up dynamic programming with tabulation.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 17,
+        difficulty: 'Advanced',
+        tags: ['dp', 'techniques']
+      },
+      {
+        id: 'dp-problems',
+        title: 'Common DP Problems',
+        description: 'Solving classic dynamic programming problems and patterns.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 20,
+        difficulty: 'Advanced',
+        tags: ['dp', 'problems']
+      }
+    ]
+  },
+  {
+    id: 'heaps',
+    title: 'Heaps',
+    description: 'Learn about heap data structures and priority queues.',
+    icon: 'stacked-bar-chart',
+    lessons: [
+      {
+        id: 'heaps-intro',
+        title: 'Introduction to Heaps',
+        description: 'Learn the basics of heap data structures and their properties.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 12,
+        difficulty: 'Intermediate',
+        tags: ['heaps', 'fundamentals']
+      },
+      {
+        id: 'min-max-heaps',
+        title: 'Min Heaps and Max Heaps',
+        description: 'Understanding min heaps, max heaps and their implementation.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['heaps', 'types']
+      },
+      {
+        id: 'priority-queues',
+        title: 'Priority Queues',
+        description: 'Implementing and using priority queues with heaps.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 15,
+        difficulty: 'Intermediate',
+        tags: ['heaps', 'priority-queues']
       }
     ]
   }

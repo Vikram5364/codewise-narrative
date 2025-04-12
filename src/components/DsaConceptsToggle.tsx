@@ -8,7 +8,8 @@ import {
   Hash,
   MinusSquare,
   SortAsc,
-  Sigma
+  Sigma,
+  BarChart3
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -79,6 +80,14 @@ const dsaConcepts: DsaConcept[] = [
     description: 'Method for solving complex problems by breaking them down into simpler subproblems.',
     path: '/lesson/dp-intro',
     difficulty: 'Advanced'
+  },
+  {
+    id: 'heaps',
+    name: 'Heaps',
+    icon: BarChart3,
+    description: 'Specialized tree-based data structure that satisfies the heap property.',
+    path: '/lesson/heaps-intro',
+    difficulty: 'Intermediate'
   }
 ];
 
