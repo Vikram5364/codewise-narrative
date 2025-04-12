@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { 
-  BinaryTree, 
+  GitBranch, 
   ListTree, 
   Network,
   Hash,
@@ -35,7 +35,7 @@ const dsaConcepts: DsaConcept[] = [
   {
     id: 'trees',
     name: 'Trees',
-    icon: BinaryTree,
+    icon: GitBranch,
     description: 'Hierarchical data structure with a root value and subtrees of children nodes.'
   },
   {
