@@ -8,9 +8,7 @@ import {
   Hash,
   MinusSquare,
   SortAsc,
-  Sigma,
-  MoonIcon,
-  SunIcon
+  Sigma
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -22,6 +20,7 @@ type DsaConcept = {
   icon: React.ElementType;
   description: string;
   path: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
 };
 
 const dsaConcepts: DsaConcept[] = [
@@ -30,49 +29,56 @@ const dsaConcepts: DsaConcept[] = [
     name: 'Arrays',
     icon: MinusSquare,
     description: 'Sequential collection of elements of same type stored at contiguous memory locations.',
-    path: '/lesson/arrays-intro'
+    path: '/lesson/arrays-intro',
+    difficulty: 'Beginner'
   },
   {
     id: 'linked-lists',
     name: 'Linked Lists',
     icon: ListTree,
     description: 'Linear data structure where elements are not stored at contiguous locations.',
-    path: '/lesson/linked-lists-intro'
+    path: '/lesson/linked-lists-intro',
+    difficulty: 'Beginner'
   },
   {
     id: 'trees',
     name: 'Trees',
     icon: GitBranch,
     description: 'Hierarchical data structure with a root value and subtrees of children nodes.',
-    path: '/lesson/trees-intro'
+    path: '/lesson/trees-intro',
+    difficulty: 'Intermediate'
   },
   {
     id: 'graphs',
     name: 'Graphs',
     icon: Network,
     description: 'Non-linear data structure consisting of vertices and edges connecting these vertices.',
-    path: '/lesson/graphs-intro'
+    path: '/lesson/graphs-intro',
+    difficulty: 'Intermediate'
   },
   {
     id: 'hash-tables',
     name: 'Hash Tables',
     icon: Hash,
     description: 'Data structure that implements an associative array abstract data type.',
-    path: '/lesson/hash-tables-intro'
+    path: '/lesson/hash-tables-intro',
+    difficulty: 'Intermediate'
   },
   {
     id: 'sorting',
     name: 'Sorting Algorithms',
     icon: SortAsc,
     description: 'Algorithms for ordering elements in a list or array.',
-    path: '/lesson/bubble-sort'
+    path: '/lesson/bubble-sort',
+    difficulty: 'Beginner'
   },
   {
     id: 'dp',
     name: 'Dynamic Programming',
     icon: Sigma,
     description: 'Method for solving complex problems by breaking them down into simpler subproblems.',
-    path: '/lesson/dp-intro'
+    path: '/lesson/dp-intro',
+    difficulty: 'Advanced'
   }
 ];
 
@@ -107,6 +113,17 @@ const DsaConceptsToggle: React.FC = () => {
             <CardDescription>{selectedConceptData.description}</CardDescription>
           </CardHeader>
           <CardContent>
+            <div className="flex items-center mb-4">
+              <span className={`text-sm px-2 py-0.5 rounded-full ${
+                selectedConceptData.difficulty === 'Beginner' 
+                  ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                  : selectedConceptData.difficulty === 'Intermediate'
+                  ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
+                  : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
+              }`}>
+                {selectedConceptData.difficulty}
+              </span>
+            </div>
             <p className="text-sm text-muted-foreground mb-4">
               Select a topic to start learning about {selectedConceptData.name.toLowerCase()}.
             </p>

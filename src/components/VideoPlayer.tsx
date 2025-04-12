@@ -4,6 +4,7 @@ import { Play, Pause, SkipBack, SkipForward, Volume2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 interface VideoPlayerProps {
   videoUrl: string;
@@ -17,21 +18,36 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, title, className })
   const [volume, setVolume] = useState(80);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+  const [videoError, setVideoError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Sample video URL to use when no valid URL is provided
   const fallbackVideoUrl = 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4';
   
-  const actualVideoUrl = videoUrl.includes('placeholder') ? fallbackVideoUrl : videoUrl;
+  const actualVideoUrl = videoUrl || fallbackVideoUrl;
 
   const togglePlay = () => {
     if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
+      try {
+        if (isPlaying) {
+          videoRef.current.pause();
+        } else {
+          const playPromise = videoRef.current.play();
+          
+          if (playPromise !== undefined) {
+            playPromise.catch(error => {
+              console.error("Play error:", error);
+              toast.error("Could not play video. Please try again.");
+              setIsPlaying(false);
+            });
+          }
+        }
+        setIsPlaying(!isPlaying);
+      } catch (error) {
+        console.error("Video play/pause error:", error);
+        toast.error("Video playback error occurred");
+        setIsPlaying(false);
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
@@ -84,27 +100,45 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, title, className })
       
       const handleLoadedMetadata = () => {
         setDuration(videoRef.current?.duration || 0);
+        setVideoError(false);
+      };
+      
+      const handleError = () => {
+        console.error("Video loading error");
+        setVideoError(true);
+        toast.error("Video could not be loaded");
       };
       
       videoRef.current.addEventListener('loadedmetadata', handleLoadedMetadata);
+      videoRef.current.addEventListener('error', handleError);
       
       return () => {
-        videoRef.current?.removeEventListener('loadedmetadata', handleLoadedMetadata);
+        if (videoRef.current) {
+          videoRef.current.removeEventListener('loadedmetadata', handleLoadedMetadata);
+          videoRef.current.removeEventListener('error', handleError);
+        }
       };
     }
-  }, [volume]);
+  }, [volume, actualVideoUrl]);
 
   return (
     <div className={cn("rounded-lg overflow-hidden bg-black", className)}>
-      <div className="video-container">
-        <video
-          ref={videoRef}
-          src={actualVideoUrl}
-          onTimeUpdate={handleTimeUpdate}
-          onEnded={() => setIsPlaying(false)}
-          onLoadedMetadata={() => setDuration(videoRef.current?.duration || 0)}
-          poster={`https://placehold.co/600x400/000000/FFFFFF?text=${encodeURIComponent(title)}`}
-        />
+      <div className="video-container relative" style={{ aspectRatio: '16/9' }}>
+        {videoError ? (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-900 text-white">
+            <p>Video could not be loaded. Please try again later.</p>
+          </div>
+        ) : (
+          <video
+            ref={videoRef}
+            src={actualVideoUrl}
+            onTimeUpdate={handleTimeUpdate}
+            onEnded={() => setIsPlaying(false)}
+            onLoadedMetadata={() => setDuration(videoRef.current?.duration || 0)}
+            poster={`https://placehold.co/800x450/000000/FFFFFF?text=${encodeURIComponent(title || 'Video Lesson')}`}
+            className="w-full h-full object-contain"
+          />
+        )}
       </div>
       
       <div className="bg-gray-900 text-white p-4">

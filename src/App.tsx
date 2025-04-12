@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import LessonPage from "./pages/LessonPage";
+import CoursesPage from "./pages/CoursesPage";
+import ChallengesPage from "./pages/ChallengesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +23,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/lesson/:lessonId" element={<LessonPage />} />
+            <Route path="/courses" element={<CoursesPage />} />
+            <Route path="/challenges" element={<ChallengesPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
