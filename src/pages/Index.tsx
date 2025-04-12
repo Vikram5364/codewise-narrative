@@ -2,6 +2,8 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Dashboard from '@/components/Dashboard';
+import DsaConceptsToggle from '@/components/DsaConceptsToggle';
+import AuthToggle from '@/components/AuthToggle';
 
 const Index = () => {
   return (
@@ -12,6 +14,15 @@ const Index = () => {
         <p className="text-xl text-muted-foreground mb-8">
           Learn data structures and algorithms through interactive videos and challenges
         </p>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+          <div className="lg:col-span-2">
+            <DsaConceptsToggle />
+          </div>
+          <div className="lg:col-span-1">
+            <AuthToggle />
+          </div>
+        </div>
         
         <Dashboard />
       </main>
