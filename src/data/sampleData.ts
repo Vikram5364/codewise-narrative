@@ -1,4 +1,3 @@
-
 import { Topic, Lesson, CodingChallenge } from '../types';
 
 export const topics: Topic[] = [
@@ -12,7 +11,7 @@ export const topics: Topic[] = [
         id: 'arrays-intro',
         title: 'Introduction to Arrays',
         description: 'Learn the basics of arrays and how they store data in memory.',
-        videoUrl: 'https://placeholder-video.com/arrays-intro',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
         duration: 8,
         difficulty: 'Beginner',
         tags: ['arrays', 'fundamentals']
@@ -21,7 +20,7 @@ export const topics: Topic[] = [
         id: 'array-operations',
         title: 'Basic Array Operations',
         description: 'Learn about insertion, deletion, and traversal in arrays.',
-        videoUrl: 'https://placeholder-video.com/array-operations',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
         duration: 10,
         difficulty: 'Beginner',
         tags: ['arrays', 'operations']
@@ -38,10 +37,97 @@ export const topics: Topic[] = [
         id: 'linked-lists-intro',
         title: 'Introduction to Linked Lists',
         description: 'Learn the basics of linked lists and their memory structure.',
-        videoUrl: 'https://placeholder-video.com/linked-lists-intro',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
         duration: 9,
         difficulty: 'Beginner',
         tags: ['linked-lists', 'fundamentals']
+      },
+      {
+        id: 'linked-lists-operations',
+        title: 'Linked List Operations',
+        description: 'Learn about insertion, deletion, and traversal in linked lists.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 12,
+        difficulty: 'Beginner',
+        tags: ['linked-lists', 'operations']
+      }
+    ]
+  },
+  {
+    id: 'trees',
+    title: 'Trees',
+    description: 'Explore tree data structures and their applications.',
+    icon: 'git-branch',
+    lessons: [
+      {
+        id: 'trees-intro',
+        title: 'Introduction to Trees',
+        description: 'Learn the basics of tree data structures and terminology.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 10,
+        difficulty: 'Intermediate',
+        tags: ['trees', 'fundamentals']
+      },
+      {
+        id: 'binary-trees',
+        title: 'Binary Trees',
+        description: 'Understand binary trees and their implementation.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['trees', 'binary-trees']
+      }
+    ]
+  },
+  {
+    id: 'graphs',
+    title: 'Graphs',
+    description: 'Master graph data structures and algorithms.',
+    icon: 'network',
+    lessons: [
+      {
+        id: 'graphs-intro',
+        title: 'Introduction to Graphs',
+        description: 'Learn the basics of graph data structures and representations.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 11,
+        difficulty: 'Intermediate',
+        tags: ['graphs', 'fundamentals']
+      },
+      {
+        id: 'graph-traversal',
+        title: 'Graph Traversal Algorithms',
+        description: 'Learn BFS and DFS traversal techniques for graphs.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 15,
+        difficulty: 'Intermediate',
+        tags: ['graphs', 'algorithms']
+      }
+    ]
+  },
+  {
+    id: 'hash-tables',
+    title: 'Hash Tables',
+    description: 'Learn about hash tables and their efficient lookup operations.',
+    icon: 'hash',
+    lessons: [
+      {
+        id: 'hash-tables-intro',
+        title: 'Introduction to Hash Tables',
+        description: 'Learn the basics of hash tables and hash functions.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 10,
+        difficulty: 'Intermediate',
+        tags: ['hash-tables', 'fundamentals']
+      },
+      {
+        id: 'collision-resolution',
+        title: 'Collision Resolution Techniques',
+        description: 'Learn various methods to handle collisions in hash tables.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 12,
+        difficulty: 'Intermediate',
+        tags: ['hash-tables', 'advanced']
       }
     ]
   },
@@ -55,10 +141,45 @@ export const topics: Topic[] = [
         id: 'bubble-sort',
         title: 'Bubble Sort',
         description: 'Learn about the simplest sorting algorithm and its implementation.',
-        videoUrl: 'https://placeholder-video.com/bubble-sort',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
         duration: 12,
         difficulty: 'Beginner',
         tags: ['sorting', 'algorithms']
+      },
+      {
+        id: 'quick-sort',
+        title: 'Quick Sort',
+        description: 'Learn about the quick sort algorithm and its implementation.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 15,
+        difficulty: 'Intermediate',
+        tags: ['sorting', 'algorithms']
+      }
+    ]
+  },
+  {
+    id: 'dp',
+    title: 'Dynamic Programming',
+    description: 'Master the art of solving complex problems using dynamic programming.',
+    icon: 'sigma',
+    lessons: [
+      {
+        id: 'dp-intro',
+        title: 'Introduction to Dynamic Programming',
+        description: 'Learn the basics of dynamic programming and its applications.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 15,
+        difficulty: 'Advanced',
+        tags: ['dp', 'fundamentals']
+      },
+      {
+        id: 'memoization',
+        title: 'Memoization Techniques',
+        description: 'Learn about top-down dynamic programming with memoization.',
+        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        duration: 18,
+        difficulty: 'Advanced',
+        tags: ['dp', 'techniques']
       }
     ]
   }

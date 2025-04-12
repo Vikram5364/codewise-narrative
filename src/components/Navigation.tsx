@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Code2, BookOpen, Award, User } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Navigation: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Navigation: React.FC = () => {
           </Link>
         </nav>
         <div className="ml-auto flex items-center space-x-4">
+          <ThemeToggle />
           <Button variant="ghost" size="icon">
             <BookOpen className="h-5 w-5" />
           </Button>

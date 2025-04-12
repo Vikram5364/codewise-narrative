@@ -8,15 +8,20 @@ import {
   Hash,
   MinusSquare,
   SortAsc,
-  Sigma
+  Sigma,
+  MoonIcon,
+  SunIcon
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 type DsaConcept = {
   id: string;
   name: string;
   icon: React.ElementType;
   description: string;
+  path: string;
 };
 
 const dsaConcepts: DsaConcept[] = [
@@ -24,43 +29,50 @@ const dsaConcepts: DsaConcept[] = [
     id: 'arrays',
     name: 'Arrays',
     icon: MinusSquare,
-    description: 'Sequential collection of elements of same type stored at contiguous memory locations.'
+    description: 'Sequential collection of elements of same type stored at contiguous memory locations.',
+    path: '/lesson/arrays-intro'
   },
   {
     id: 'linked-lists',
     name: 'Linked Lists',
     icon: ListTree,
-    description: 'Linear data structure where elements are not stored at contiguous locations.'
+    description: 'Linear data structure where elements are not stored at contiguous locations.',
+    path: '/lesson/linked-lists-intro'
   },
   {
     id: 'trees',
     name: 'Trees',
     icon: GitBranch,
-    description: 'Hierarchical data structure with a root value and subtrees of children nodes.'
+    description: 'Hierarchical data structure with a root value and subtrees of children nodes.',
+    path: '/lesson/trees-intro'
   },
   {
     id: 'graphs',
     name: 'Graphs',
     icon: Network,
-    description: 'Non-linear data structure consisting of vertices and edges connecting these vertices.'
+    description: 'Non-linear data structure consisting of vertices and edges connecting these vertices.',
+    path: '/lesson/graphs-intro'
   },
   {
     id: 'hash-tables',
     name: 'Hash Tables',
     icon: Hash,
-    description: 'Data structure that implements an associative array abstract data type.'
+    description: 'Data structure that implements an associative array abstract data type.',
+    path: '/lesson/hash-tables-intro'
   },
   {
     id: 'sorting',
     name: 'Sorting Algorithms',
     icon: SortAsc,
-    description: 'Algorithms for ordering elements in a list or array.'
+    description: 'Algorithms for ordering elements in a list or array.',
+    path: '/lesson/bubble-sort'
   },
   {
     id: 'dp',
     name: 'Dynamic Programming',
     icon: Sigma,
-    description: 'Method for solving complex problems by breaking them down into simpler subproblems.'
+    description: 'Method for solving complex problems by breaking them down into simpler subproblems.',
+    path: '/lesson/dp-intro'
   }
 ];
 
@@ -95,9 +107,12 @@ const DsaConceptsToggle: React.FC = () => {
             <CardDescription>{selectedConceptData.description}</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mb-4">
               Select a topic to start learning about {selectedConceptData.name.toLowerCase()}.
             </p>
+            <Link to={selectedConceptData.path}>
+              <Button className="w-full">Start Learning {selectedConceptData.name}</Button>
+            </Link>
           </CardContent>
         </Card>
       )}
