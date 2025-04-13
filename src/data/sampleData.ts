@@ -228,6 +228,51 @@ export const topics: Topic[] = [
         duration: 14,
         difficulty: 'Intermediate',
         tags: ['arrays', 'circular']
+      },
+      {
+        id: 'array-efficient-rotation',
+        title: 'Efficient Array Rotation',
+        description: 'Learn efficient techniques for rotating arrays.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 16,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'rotation', 'algorithms']
+      },
+      {
+        id: 'array-sparse-arrays',
+        title: 'Sparse Arrays',
+        description: 'Working with sparse arrays efficiently.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'sparse', 'memory']
+      },
+      {
+        id: 'array-jagged-arrays',
+        title: 'Jagged Arrays',
+        description: 'Understanding and implementing jagged arrays.',
+        imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+        duration: 15,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'jagged', 'multidimensional']
+      },
+      {
+        id: 'array-parallel-algorithms',
+        title: 'Parallel Array Algorithms',
+        description: 'Implementing array algorithms for parallel processing.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 18,
+        difficulty: 'Advanced',
+        tags: ['arrays', 'parallel', 'algorithms']
+      },
+      {
+        id: 'array-cache-optimizations',
+        title: 'Cache-Friendly Array Operations',
+        description: 'Optimizing array operations for better cache utilization.',
+        imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
+        duration: 16,
+        difficulty: 'Advanced',
+        tags: ['arrays', 'optimization', 'cache']
       }
     ]
   },
@@ -435,6 +480,42 @@ export const topics: Topic[] = [
         duration: 10,
         difficulty: 'Intermediate',
         tags: ['linked-lists', 'applications']
+      },
+      {
+        id: 'linked-list-memory-pools',
+        title: 'Memory Pools for Linked Lists',
+        description: 'Using memory pools for efficient linked list implementations.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 16,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'memory', 'optimization']
+      },
+      {
+        id: 'linked-list-persistent',
+        title: 'Persistent Linked Lists',
+        description: 'Creating persistent versions of linked list data structures.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 15,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'persistent', 'immutable']
+      },
+      {
+        id: 'linked-list-multithreaded',
+        title: 'Thread-Safe Linked Lists',
+        description: 'Implementing thread-safe linked lists for concurrent applications.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 17,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'multithreading', 'concurrency']
+      },
+      {
+        id: 'linked-list-functional',
+        title: 'Functional Programming with Linked Lists',
+        description: 'Using linked lists in functional programming paradigms.',
+        imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+        duration: 14,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'functional-programming']
       }
     ]
   },
@@ -466,209 +547,117 @@ export const topics: Topic[] = [
             content: "There are various types of trees such as binary trees, binary search trees (BST), AVL trees, Red-Black trees, B-trees, and more. Each type has specific properties and use cases."
           }
         ]
-      }
-    ]
-  },
-  {
-    id: 'graphs',
-    title: 'Graphs',
-    description: 'Master graph data structures and algorithms.',
-    icon: 'network',
-    lessons: [
+      },
       {
-        id: 'graphs-intro',
-        title: 'Introduction to Graphs',
-        description: 'Learn the basics of graph data structures and representations.',
+        id: 'binary-trees',
+        title: 'Binary Trees',
+        description: 'Learn about binary trees and their properties.',
         imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
-        duration: 11,
-        difficulty: 'Intermediate',
-        tags: ['graphs', 'fundamentals'],
-        sections: [
-          {
-            title: "What are Graphs?",
-            content: "A graph is a non-linear data structure consisting of vertices (or nodes) and edges that connect these vertices. Graphs are used to represent networks of connections, such as road networks, social networks, or computer networks."
-          },
-          {
-            title: "Types of Graphs",
-            content: "Graphs can be directed (edges have a direction) or undirected, weighted (edges have values) or unweighted, cyclic or acyclic, and connected or disconnected. Each type has specific properties and applications."
-          },
-          {
-            title: "Graph Representations",
-            content: "The two common ways to represent graphs in programming are adjacency matrices and adjacency lists. Adjacency matrices use a 2D array to represent connections, while adjacency lists use a collection of lists or maps."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'hash-tables',
-    title: 'Hash Tables',
-    description: 'Learn about hash tables and their efficient lookup operations.',
-    icon: 'hash',
-    lessons: [
-      {
-        id: 'hash-tables-intro',
-        title: 'Introduction to Hash Tables',
-        description: 'Learn the basics of hash tables and hash functions.',
-        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
-        duration: 10,
-        difficulty: 'Intermediate',
-        tags: ['hash-tables', 'fundamentals'],
-        sections: [
-          {
-            title: "What are Hash Tables?",
-            content: "A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found."
-          },
-          {
-            title: "Hash Functions",
-            content: "A hash function converts data of arbitrary size to fixed-size values. In hash tables, it converts keys into array indices. A good hash function distributes keys uniformly across the array to minimize collisions."
-          },
-          {
-            title: "Time Complexity",
-            content: "Hash tables provide average-case O(1) time complexity for search, insert, and delete operations. However, in the worst case (with many collisions), the performance can degrade to O(n)."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'sorting',
-    title: 'Sorting Algorithms',
-    description: 'Master various sorting algorithms and their implementation.',
-    icon: 'sort-asc',
-    lessons: [
-      {
-        id: 'bubble-sort',
-        title: 'Bubble Sort',
-        description: 'Learn about the simplest sorting algorithm and its implementation.',
-        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
         duration: 12,
-        difficulty: 'Beginner',
-        tags: ['sorting', 'algorithms'],
+        difficulty: 'Intermediate',
+        tags: ['trees', 'binary-trees'],
         sections: [
           {
-            title: "Understanding Bubble Sort",
-            content: "Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted."
+            title: "Binary Tree Basics",
+            content: "A binary tree is a tree data structure in which each node has at most two children, referred to as the left child and the right child. This constraint allows for efficient traversal and search algorithms."
           },
           {
-            title: "Implementation",
-            content: "Bubble sort is easy to implement but inefficient for large lists. It has a time complexity of O(n²) in the worst and average cases, making it impractical for large datasets."
+            title: "Properties",
+            content: "Key properties of binary trees include height (the length of the longest path from root to leaf), depth (the level or distance of a node from the root), and balance factor (difference in height between left and right subtrees)."
           },
           {
-            title: "Optimization",
-            content: "A common optimization is to stop the algorithm if no swaps occur in a pass, indicating the list is already sorted. This can improve performance for partially sorted arrays."
+            title: "Traversal Algorithms",
+            content: "Binary trees can be traversed in different ways: in-order (left, root, right), pre-order (root, left, right), post-order (left, right, root), and level-order (breadth-first traversal)."
           }
         ]
-      }
-    ]
-  },
-  {
-    id: 'dp',
-    title: 'Dynamic Programming',
-    description: 'Master the art of solving complex problems using dynamic programming.',
-    icon: 'sigma',
-    lessons: [
+      },
       {
-        id: 'dp-intro',
-        title: 'Introduction to Dynamic Programming',
-        description: 'Learn the basics of dynamic programming and its applications.',
+        id: 'binary-search-trees',
+        title: 'Binary Search Trees',
+        description: 'Understanding binary search trees and their efficient operations.',
+        imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['trees', 'bst', 'searching'],
+        sections: [
+          {
+            title: "What are Binary Search Trees?",
+            content: "A Binary Search Tree (BST) is a binary tree where each node's left subtree contains only nodes with keys less than the node's key, and each node's right subtree contains only nodes with keys greater than the node's key."
+          },
+          {
+            title: "Operations",
+            content: "BSTs support operations like search, insertion, and deletion in O(log n) time on average, making them efficient for dictionary-like applications."
+          },
+          {
+            title: "Balancing",
+            content: "Unbalanced BSTs can degrade to linked lists, with O(n) operation time. This is why balanced variants like AVL trees and Red-Black trees are often used in practice."
+          }
+        ]
+      },
+      {
+        id: 'avl-trees',
+        title: 'AVL Trees',
+        description: 'Self-balancing binary search trees for efficient operations.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 15,
+        difficulty: 'Advanced',
+        tags: ['trees', 'avl', 'balanced']
+      },
+      {
+        id: 'red-black-trees',
+        title: 'Red-Black Trees',
+        description: 'Another type of self-balancing binary search tree.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 16,
+        difficulty: 'Advanced',
+        tags: ['trees', 'red-black', 'balanced']
+      },
+      {
+        id: 'b-trees',
+        title: 'B-Trees',
+        description: 'Trees optimized for storage systems like databases and file systems.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 15,
+        difficulty: 'Advanced',
+        tags: ['trees', 'b-trees', 'databases']
+      },
+      {
+        id: 'tree-traversal',
+        title: 'Tree Traversal Algorithms',
+        description: 'Different ways to visit all nodes in a tree.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 13,
+        difficulty: 'Intermediate',
+        tags: ['trees', 'traversal', 'algorithms']
+      },
+      {
+        id: 'trie-data-structure',
+        title: 'Trie Data Structure',
+        description: 'Tree structure used for efficient string operations.',
+        imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['trees', 'trie', 'strings']
+      },
+      {
+        id: 'segment-trees',
+        title: 'Segment Trees',
+        description: 'Trees for efficiently querying ranges in an array.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 18,
+        difficulty: 'Advanced',
+        tags: ['trees', 'segment-trees', 'range-queries']
+      },
+      {
+        id: 'binary-indexed-trees',
+        title: 'Binary Indexed Trees (Fenwick Trees)',
+        description: 'Efficient data structure for cumulative frequency tables.',
         imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
         duration: 15,
         difficulty: 'Advanced',
-        tags: ['dp', 'fundamentals'],
-        sections: [
-          {
-            title: "What is Dynamic Programming?",
-            content: "Dynamic Programming (DP) is a method for solving complex problems by breaking them down into simpler subproblems. It's applicable when the problem has overlapping subproblems and optimal substructure."
-          },
-          {
-            title: "Key Concepts",
-            content: "Two key attributes of DP problems are: overlapping subproblems (same subproblems are solved multiple times) and optimal substructure (an optimal solution can be constructed from optimal solutions of its subproblems)."
-          },
-          {
-            title: "Approaches",
-            content: "DP problems can be solved using two approaches: top-down (memoization) and bottom-up (tabulation). Top-down uses recursion with a cache, while bottom-up builds solutions for smaller problems first."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'heaps',
-    title: 'Heaps',
-    description: 'Learn about heap data structures and priority queues.',
-    icon: 'stacked-bar-chart',
-    lessons: [
-      {
-        id: 'heaps-intro',
-        title: 'Introduction to Heaps',
-        description: 'Learn the basics of heap data structures and their properties.',
-        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-        duration: 12,
-        difficulty: 'Intermediate',
-        tags: ['heaps', 'fundamentals'],
-        sections: [
-          {
-            title: "What are Heaps?",
-            content: "A heap is a specialized tree-based data structure that satisfies the heap property. For a max heap, the key at the parent is greater than or equal to those of its children. For a min heap, the key at the parent is less than or equal to those of its children."
-          },
-          {
-            title: "Binary Heaps",
-            content: "A binary heap is a complete binary tree where each level is completely filled except possibly the lowest level, which is filled from left to right. Binary heaps are commonly implemented using arrays."
-          },
-          {
-            title: "Applications",
-            content: "Heaps are widely used in priority queues, heap sort, graph algorithms like Dijkstra's algorithm, and in systems where quick access to the minimum or maximum element is required."
-          }
-        ]
-      }
-    ]
-  }
-];
-
-export const challenges: CodingChallenge[] = [
-  {
-    id: 'challenge-1',
-    lessonId: 'arrays-intro',
-    title: 'Find Maximum Element',
-    description: 'Write a function to find the maximum element in an array.',
-    starterCode: `function findMax(arr) {\n  // Your code here\n}`,
-    language: 'javascript',
-    difficulty: 'Easy',
-    testCases: [
-      {
-        input: '[1, 3, 5, 7, 9]',
-        expectedOutput: '9'
+        tags: ['trees', 'fenwick', 'cumulative']
       },
       {
-        input: '[-5, -2, -10, -1]',
-        expectedOutput: '-1'
-      }
-    ]
-  },
-  {
-    id: 'challenge-2',
-    lessonId: 'array-operations',
-    title: 'Reverse an Array',
-    description: 'Write a function to reverse the elements of an array in-place.',
-    starterCode: `function reverseArray(arr) {\n  // Your code here\n}`,
-    language: 'javascript',
-    difficulty: 'Easy',
-    testCases: [
-      {
-        input: '[1, 2, 3, 4, 5]',
-        expectedOutput: '[5, 4, 3, 2, 1]'
-      },
-      {
-        input: '["a", "b", "c"]',
-        expectedOutput: '["c", "b", "a"]'
-      }
-    ]
-  }
-];
-
-export const userProgressSample: { completedLessons: string[], completedChallenges: string[], currentLesson?: string } = {
-  completedLessons: ['arrays-intro'],
-  completedChallenges: ['challenge-1'],
-  currentLesson: 'array-operations'
-};
+        id: 'tree-balancing',
+        title: 'Tree Balancing Techniques',
+        description: 'Methods to maintain balance in tree structures.',
