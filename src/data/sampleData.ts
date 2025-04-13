@@ -11,34 +11,76 @@ export const topics: Topic[] = [
         id: 'arrays-intro',
         title: 'Introduction to Arrays',
         description: 'Learn the basics of arrays and how they store data in memory.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
         duration: 8,
         difficulty: 'Beginner',
-        tags: ['arrays', 'fundamentals']
+        tags: ['arrays', 'fundamentals'],
+        sections: [
+          {
+            title: "Overview",
+            content: "Arrays are one of the most fundamental data structures in computer science. An array is a collection of elements, all of the same type, stored in contiguous memory locations. This makes accessing array elements very efficient, as the exact memory address of any element can be calculated using its index position."
+          },
+          {
+            title: "Memory Structure",
+            content: "In memory, arrays are stored as contiguous blocks. Each element of an array occupies the same amount of memory space. For instance, in a 32-bit system, an integer array would use 4 bytes per element. This property allows for constant-time access to any element in the array using its index."
+          },
+          {
+            title: "Time Complexity",
+            content: "Arrays offer O(1) time complexity for accessing elements by index. However, operations like insertion or deletion (except at the end) typically have O(n) time complexity as they require shifting elements."
+          }
+        ]
       },
       {
         id: 'array-operations',
         title: 'Basic Array Operations',
         description: 'Learn about insertion, deletion, and traversal in arrays.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
         duration: 10,
         difficulty: 'Beginner',
-        tags: ['arrays', 'operations']
+        tags: ['arrays', 'operations'],
+        sections: [
+          {
+            title: "Traversal",
+            content: "Traversing an array means visiting each element of the array exactly once. This is typically done using loops, such as for or while loops. Traversal has a time complexity of O(n) where n is the number of elements in the array."
+          },
+          {
+            title: "Insertion",
+            content: "Inserting an element at a specific position in an array requires shifting all elements after that position one step to the right. For insertion at the end of an array, the time complexity is O(1), but for insertion at the beginning or middle, it's O(n) due to the need for shifting elements."
+          },
+          {
+            title: "Deletion",
+            content: "Deleting an element from an array involves removing the element and then shifting all elements after it one step to the left to fill the gap. Like insertion, deletion at the end has O(1) time complexity, but deletion at the beginning or middle has O(n) time complexity."
+          }
+        ]
       },
       {
         id: 'array-searching',
         title: 'Searching in Arrays',
         description: 'Learn about linear and binary search algorithms for arrays.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
         duration: 12,
         difficulty: 'Beginner',
-        tags: ['arrays', 'searching', 'algorithms']
+        tags: ['arrays', 'searching', 'algorithms'],
+        sections: [
+          {
+            title: "Linear Search",
+            content: "Linear search is the simplest searching algorithm. It checks each element of the array sequentially until it finds the target element or reaches the end of the array. The time complexity is O(n), where n is the number of elements in the array."
+          },
+          {
+            title: "Binary Search",
+            content: "Binary search is an efficient algorithm for finding an item from a sorted array. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one. The time complexity is O(log n)."
+          },
+          {
+            title: "Comparison",
+            content: "While linear search works on both sorted and unsorted arrays, binary search requires the array to be sorted. However, binary search is significantly more efficient for large arrays."
+          }
+        ]
       },
       {
         id: 'array-sorting',
         title: 'Sorting Arrays',
         description: 'Introduction to basic sorting algorithms for arrays.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
         duration: 15,
         difficulty: 'Intermediate',
         tags: ['arrays', 'sorting', 'algorithms']
@@ -47,10 +89,145 @@ export const topics: Topic[] = [
         id: 'multidimensional-arrays',
         title: 'Multidimensional Arrays',
         description: 'Working with 2D and 3D arrays and their applications.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
         duration: 14,
         difficulty: 'Intermediate',
         tags: ['arrays', 'multidimensional', 'advanced']
+      },
+      {
+        id: 'array-algorithms',
+        title: 'Common Array Algorithms',
+        description: 'Master common algorithms and techniques for array manipulation.',
+        imageUrl: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7',
+        duration: 16,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'algorithms']
+      },
+      {
+        id: 'array-hashing',
+        title: 'Array Hashing Techniques',
+        description: 'Learn how to use arrays for efficient hashing implementations.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 13,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'hashing']
+      },
+      {
+        id: 'array-two-pointers',
+        title: 'Two Pointers Technique',
+        description: 'Master the two pointers technique for solving array problems.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'algorithms', 'techniques']
+      },
+      {
+        id: 'array-sliding-window',
+        title: 'Sliding Window Technique',
+        description: 'Learn the sliding window approach for array problems.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 15,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'algorithms', 'techniques']
+      },
+      {
+        id: 'array-prefix-sum',
+        title: 'Prefix Sum Arrays',
+        description: 'Understanding prefix sum arrays and their applications.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 12,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'techniques']
+      },
+      {
+        id: 'array-binary-search',
+        title: 'Advanced Binary Search',
+        description: 'Advanced applications of binary search in arrays.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 16,
+        difficulty: 'Advanced',
+        tags: ['arrays', 'searching', 'algorithms']
+      },
+      {
+        id: 'array-dynamic-programming',
+        title: 'Dynamic Programming with Arrays',
+        description: 'Solving complex problems using dynamic programming on arrays.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 18,
+        difficulty: 'Advanced',
+        tags: ['arrays', 'dp', 'algorithms']
+      },
+      {
+        id: 'array-bit-manipulation',
+        title: 'Bit Manipulation with Arrays',
+        description: 'Using bit manipulation techniques for array problems.',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+        duration: 15,
+        difficulty: 'Advanced',
+        tags: ['arrays', 'bit-manipulation']
+      },
+      {
+        id: 'array-kadanes-algorithm',
+        title: "Kadane's Algorithm",
+        description: "Understanding Kadane's algorithm for maximum subarray problems.",
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'algorithms']
+      },
+      {
+        id: 'array-boyer-moore',
+        title: 'Boyer-Moore Majority Vote',
+        description: 'Learning the Boyer-Moore majority vote algorithm.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 13,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'algorithms']
+      },
+      {
+        id: 'array-dutch-flag',
+        title: 'Dutch National Flag Algorithm',
+        description: 'Understanding the Dutch national flag algorithm for sorting.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 12,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'sorting', 'algorithms']
+      },
+      {
+        id: 'array-matrix-operations',
+        title: 'Matrix Operations',
+        description: 'Learn operations on matrices represented as 2D arrays.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 16,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'matrix', 'multidimensional']
+      },
+      {
+        id: 'array-subarray-problems',
+        title: 'Subarray Problems',
+        description: 'Solving various subarray problems using efficient techniques.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 17,
+        difficulty: 'Advanced',
+        tags: ['arrays', 'algorithms', 'subarrays']
+      },
+      {
+        id: 'array-monotonic-stack',
+        title: 'Monotonic Stack Technique',
+        description: 'Using monotonic stacks to solve array problems efficiently.',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+        duration: 15,
+        difficulty: 'Advanced',
+        tags: ['arrays', 'stack', 'techniques']
+      },
+      {
+        id: 'array-circular-arrays',
+        title: 'Circular Arrays',
+        description: 'Working with circular arrays and related algorithms.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['arrays', 'circular']
       }
     ]
   },
@@ -64,25 +241,53 @@ export const topics: Topic[] = [
         id: 'linked-lists-intro',
         title: 'Introduction to Linked Lists',
         description: 'Learn the basics of linked lists and their memory structure.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
         duration: 9,
         difficulty: 'Beginner',
-        tags: ['linked-lists', 'fundamentals']
+        tags: ['linked-lists', 'fundamentals'],
+        sections: [
+          {
+            title: "What are Linked Lists?",
+            content: "A linked list is a linear data structure where elements are stored in nodes. Each node contains data and a reference (or link) to the next node in the sequence. This structure allows for efficient insertion and deletion of elements from any position in the list."
+          },
+          {
+            title: "Memory Structure",
+            content: "Unlike arrays, linked lists don't require contiguous memory allocation. Each node can be stored anywhere in memory, with pointers connecting them in sequence. This dynamic memory allocation makes linked lists flexible in size."
+          },
+          {
+            title: "Types of Linked Lists",
+            content: "There are several types of linked lists: singly linked lists (each node points to the next node), doubly linked lists (each node points to both the next and previous nodes), and circular linked lists (the last node points back to the first node)."
+          }
+        ]
       },
       {
         id: 'linked-lists-operations',
         title: 'Linked List Operations',
         description: 'Learn about insertion, deletion, and traversal in linked lists.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
         duration: 12,
         difficulty: 'Beginner',
-        tags: ['linked-lists', 'operations']
+        tags: ['linked-lists', 'operations'],
+        sections: [
+          {
+            title: "Traversal",
+            content: "Traversing a linked list involves visiting each node in the list. This is done by starting at the head and following the next pointers until the end of the list is reached. The time complexity is O(n), where n is the number of nodes."
+          },
+          {
+            title: "Insertion",
+            content: "Insertion in a linked list is more efficient than in arrays. To insert a node, you simply update the pointers. Insertion at the beginning takes O(1) time, while insertion at the end or in the middle takes O(n) time (because you need to traverse to the insertion point)."
+          },
+          {
+            title: "Deletion",
+            content: "Deletion in a linked list involves changing pointers to skip the node being deleted. Like insertion, deletion at the beginning is O(1), while deletion elsewhere is O(n) due to the need to traverse to that point."
+          }
+        ]
       },
       {
         id: 'doubly-linked-lists',
         title: 'Doubly Linked Lists',
         description: 'Understanding doubly linked lists and their implementation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
         duration: 11,
         difficulty: 'Intermediate',
         tags: ['linked-lists', 'doubly-linked']
@@ -91,10 +296,145 @@ export const topics: Topic[] = [
         id: 'circular-linked-lists',
         title: 'Circular Linked Lists',
         description: 'Understanding circular linked lists and their applications.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
         duration: 10,
         difficulty: 'Intermediate',
         tags: ['linked-lists', 'circular']
+      },
+      {
+        id: 'linked-list-vs-array',
+        title: 'Linked Lists vs Arrays',
+        description: 'Comparing linked lists and arrays - when to use each.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 8,
+        difficulty: 'Beginner',
+        tags: ['linked-lists', 'arrays', 'comparison']
+      },
+      {
+        id: 'linked-list-reverse',
+        title: 'Reversing a Linked List',
+        description: 'Learn techniques to reverse a linked list in-place.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 12,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'algorithms']
+      },
+      {
+        id: 'linked-list-cycle',
+        title: 'Detecting Cycles',
+        description: 'Algorithms to detect cycles in linked lists.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 13,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'algorithms']
+      },
+      {
+        id: 'linked-list-two-pointers',
+        title: 'Two Pointers in Linked Lists',
+        description: 'Using the two pointers technique for linked list problems.',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+        duration: 14,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'algorithms', 'techniques']
+      },
+      {
+        id: 'linked-list-intersection',
+        title: 'Finding Intersection Points',
+        description: 'Algorithms to find intersection points in linked lists.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 12,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'algorithms']
+      },
+      {
+        id: 'linked-list-merge',
+        title: 'Merging Linked Lists',
+        description: 'Learn to merge two sorted linked lists.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 11,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'algorithms']
+      },
+      {
+        id: 'linked-list-palindrome',
+        title: 'Palindrome Linked Lists',
+        description: 'Checking if a linked list is a palindrome.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 13,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'algorithms']
+      },
+      {
+        id: 'linked-list-partition',
+        title: 'Partitioning Linked Lists',
+        description: 'Techniques to partition linked lists around a value.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 14,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'algorithms']
+      },
+      {
+        id: 'linked-list-deep-copy',
+        title: 'Deep Copy of Linked Lists',
+        description: 'Creating deep copies of complex linked lists.',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+        duration: 15,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'algorithms']
+      },
+      {
+        id: 'linked-list-lru-cache',
+        title: 'LRU Cache Implementation',
+        description: 'Using linked lists to implement an LRU cache.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 16,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'cache', 'applications']
+      },
+      {
+        id: 'linked-list-implementation',
+        title: 'Custom Implementation',
+        description: 'Building your own linked list class from scratch.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 15,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'implementation']
+      },
+      {
+        id: 'linked-list-recursion',
+        title: 'Recursive Techniques',
+        description: 'Solving linked list problems using recursion.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 14,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'recursion', 'algorithms']
+      },
+      {
+        id: 'linked-list-skip',
+        title: 'Skip Lists',
+        description: 'Understanding skip lists and their implementation.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 18,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'advanced-structures']
+      },
+      {
+        id: 'linked-list-xor',
+        title: 'XOR Linked Lists',
+        description: 'Memory-efficient implementation using XOR linked lists.',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+        duration: 17,
+        difficulty: 'Advanced',
+        tags: ['linked-lists', 'advanced-structures']
+      },
+      {
+        id: 'linked-list-applications',
+        title: 'Real-world Applications',
+        description: 'Practical applications of linked lists in software systems.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 10,
+        difficulty: 'Intermediate',
+        tags: ['linked-lists', 'applications']
       }
     ]
   },
@@ -108,46 +448,24 @@ export const topics: Topic[] = [
         id: 'trees-intro',
         title: 'Introduction to Trees',
         description: 'Learn the basics of tree data structures and terminology.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
         duration: 10,
         difficulty: 'Intermediate',
-        tags: ['trees', 'fundamentals']
-      },
-      {
-        id: 'binary-trees',
-        title: 'Binary Trees',
-        description: 'Understand binary trees and their implementation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 14,
-        difficulty: 'Intermediate',
-        tags: ['trees', 'binary-trees']
-      },
-      {
-        id: 'binary-search-trees',
-        title: 'Binary Search Trees',
-        description: 'Learn about binary search trees and their operations.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 15,
-        difficulty: 'Intermediate',
-        tags: ['trees', 'binary-search-trees']
-      },
-      {
-        id: 'avl-trees',
-        title: 'AVL Trees',
-        description: 'Understanding self-balancing AVL trees and rotations.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 18,
-        difficulty: 'Advanced',
-        tags: ['trees', 'avl', 'balanced']
-      },
-      {
-        id: 'red-black-trees',
-        title: 'Red-Black Trees',
-        description: 'Understanding red-black trees and their implementation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 20,
-        difficulty: 'Advanced',
-        tags: ['trees', 'red-black', 'balanced']
+        tags: ['trees', 'fundamentals'],
+        sections: [
+          {
+            title: "What are Trees?",
+            content: "A tree is a hierarchical data structure consisting of nodes connected by edges. Each tree has a root node, and every node (except the root) has exactly one parent node. A node can have multiple child nodes."
+          },
+          {
+            title: "Tree Terminology",
+            content: "Important terms include: root (the topmost node), parent, child, leaf (a node with no children), height (longest path from root to leaf), depth (distance from a node to the root), and siblings (nodes with the same parent)."
+          },
+          {
+            title: "Types of Trees",
+            content: "There are various types of trees such as binary trees, binary search trees (BST), AVL trees, Red-Black trees, B-trees, and more. Each type has specific properties and use cases."
+          }
+        ]
       }
     ]
   },
@@ -161,37 +479,24 @@ export const topics: Topic[] = [
         id: 'graphs-intro',
         title: 'Introduction to Graphs',
         description: 'Learn the basics of graph data structures and representations.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
         duration: 11,
         difficulty: 'Intermediate',
-        tags: ['graphs', 'fundamentals']
-      },
-      {
-        id: 'graph-traversal',
-        title: 'Graph Traversal Algorithms',
-        description: 'Learn BFS and DFS traversal techniques for graphs.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 15,
-        difficulty: 'Intermediate',
-        tags: ['graphs', 'algorithms']
-      },
-      {
-        id: 'shortest-path-algorithms',
-        title: 'Shortest Path Algorithms',
-        description: 'Learn Dijkstra\'s and Bellman-Ford algorithms for finding shortest paths.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 18,
-        difficulty: 'Advanced',
-        tags: ['graphs', 'algorithms', 'shortest-path']
-      },
-      {
-        id: 'minimum-spanning-trees',
-        title: 'Minimum Spanning Trees',
-        description: 'Understanding Prim\'s and Kruskal\'s algorithms for MST.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 17,
-        difficulty: 'Advanced',
-        tags: ['graphs', 'algorithms', 'mst']
+        tags: ['graphs', 'fundamentals'],
+        sections: [
+          {
+            title: "What are Graphs?",
+            content: "A graph is a non-linear data structure consisting of vertices (or nodes) and edges that connect these vertices. Graphs are used to represent networks of connections, such as road networks, social networks, or computer networks."
+          },
+          {
+            title: "Types of Graphs",
+            content: "Graphs can be directed (edges have a direction) or undirected, weighted (edges have values) or unweighted, cyclic or acyclic, and connected or disconnected. Each type has specific properties and applications."
+          },
+          {
+            title: "Graph Representations",
+            content: "The two common ways to represent graphs in programming are adjacency matrices and adjacency lists. Adjacency matrices use a 2D array to represent connections, while adjacency lists use a collection of lists or maps."
+          }
+        ]
       }
     ]
   },
@@ -205,28 +510,24 @@ export const topics: Topic[] = [
         id: 'hash-tables-intro',
         title: 'Introduction to Hash Tables',
         description: 'Learn the basics of hash tables and hash functions.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
         duration: 10,
         difficulty: 'Intermediate',
-        tags: ['hash-tables', 'fundamentals']
-      },
-      {
-        id: 'collision-resolution',
-        title: 'Collision Resolution Techniques',
-        description: 'Learn various methods to handle collisions in hash tables.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 12,
-        difficulty: 'Intermediate',
-        tags: ['hash-tables', 'advanced']
-      },
-      {
-        id: 'hash-maps',
-        title: 'Hash Maps and Their Applications',
-        description: 'Understanding hash maps and their practical applications.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 13,
-        difficulty: 'Intermediate',
-        tags: ['hash-tables', 'hash-maps', 'applications']
+        tags: ['hash-tables', 'fundamentals'],
+        sections: [
+          {
+            title: "What are Hash Tables?",
+            content: "A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found."
+          },
+          {
+            title: "Hash Functions",
+            content: "A hash function converts data of arbitrary size to fixed-size values. In hash tables, it converts keys into array indices. A good hash function distributes keys uniformly across the array to minimize collisions."
+          },
+          {
+            title: "Time Complexity",
+            content: "Hash tables provide average-case O(1) time complexity for search, insert, and delete operations. However, in the worst case (with many collisions), the performance can degrade to O(n)."
+          }
+        ]
       }
     ]
   },
@@ -240,55 +541,24 @@ export const topics: Topic[] = [
         id: 'bubble-sort',
         title: 'Bubble Sort',
         description: 'Learn about the simplest sorting algorithm and its implementation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
         duration: 12,
         difficulty: 'Beginner',
-        tags: ['sorting', 'algorithms']
-      },
-      {
-        id: 'selection-sort',
-        title: 'Selection Sort',
-        description: 'Learn about selection sort algorithm and its implementation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 10,
-        difficulty: 'Beginner',
-        tags: ['sorting', 'algorithms']
-      },
-      {
-        id: 'insertion-sort',
-        title: 'Insertion Sort',
-        description: 'Learn about insertion sort algorithm and its implementation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 11,
-        difficulty: 'Beginner',
-        tags: ['sorting', 'algorithms']
-      },
-      {
-        id: 'merge-sort',
-        title: 'Merge Sort',
-        description: 'Understanding the divide-and-conquer merge sort algorithm.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 14,
-        difficulty: 'Intermediate',
-        tags: ['sorting', 'algorithms', 'divide-and-conquer']
-      },
-      {
-        id: 'quick-sort',
-        title: 'Quick Sort',
-        description: 'Learn about the quick sort algorithm and its implementation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 15,
-        difficulty: 'Intermediate',
-        tags: ['sorting', 'algorithms', 'divide-and-conquer']
-      },
-      {
-        id: 'heap-sort',
-        title: 'Heap Sort',
-        description: 'Learning heap sort and its connection to heap data structure.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 16,
-        difficulty: 'Advanced',
-        tags: ['sorting', 'algorithms', 'heaps']
+        tags: ['sorting', 'algorithms'],
+        sections: [
+          {
+            title: "Understanding Bubble Sort",
+            content: "Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted."
+          },
+          {
+            title: "Implementation",
+            content: "Bubble sort is easy to implement but inefficient for large lists. It has a time complexity of O(n²) in the worst and average cases, making it impractical for large datasets."
+          },
+          {
+            title: "Optimization",
+            content: "A common optimization is to stop the algorithm if no swaps occur in a pass, indicating the list is already sorted. This can improve performance for partially sorted arrays."
+          }
+        ]
       }
     ]
   },
@@ -302,37 +572,24 @@ export const topics: Topic[] = [
         id: 'dp-intro',
         title: 'Introduction to Dynamic Programming',
         description: 'Learn the basics of dynamic programming and its applications.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
         duration: 15,
         difficulty: 'Advanced',
-        tags: ['dp', 'fundamentals']
-      },
-      {
-        id: 'memoization',
-        title: 'Memoization Techniques',
-        description: 'Learn about top-down dynamic programming with memoization.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 18,
-        difficulty: 'Advanced',
-        tags: ['dp', 'techniques']
-      },
-      {
-        id: 'tabulation',
-        title: 'Tabulation Techniques',
-        description: 'Learn about bottom-up dynamic programming with tabulation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 17,
-        difficulty: 'Advanced',
-        tags: ['dp', 'techniques']
-      },
-      {
-        id: 'dp-problems',
-        title: 'Common DP Problems',
-        description: 'Solving classic dynamic programming problems and patterns.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 20,
-        difficulty: 'Advanced',
-        tags: ['dp', 'problems']
+        tags: ['dp', 'fundamentals'],
+        sections: [
+          {
+            title: "What is Dynamic Programming?",
+            content: "Dynamic Programming (DP) is a method for solving complex problems by breaking them down into simpler subproblems. It's applicable when the problem has overlapping subproblems and optimal substructure."
+          },
+          {
+            title: "Key Concepts",
+            content: "Two key attributes of DP problems are: overlapping subproblems (same subproblems are solved multiple times) and optimal substructure (an optimal solution can be constructed from optimal solutions of its subproblems)."
+          },
+          {
+            title: "Approaches",
+            content: "DP problems can be solved using two approaches: top-down (memoization) and bottom-up (tabulation). Top-down uses recursion with a cache, while bottom-up builds solutions for smaller problems first."
+          }
+        ]
       }
     ]
   },
@@ -346,28 +603,24 @@ export const topics: Topic[] = [
         id: 'heaps-intro',
         title: 'Introduction to Heaps',
         description: 'Learn the basics of heap data structures and their properties.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
         duration: 12,
         difficulty: 'Intermediate',
-        tags: ['heaps', 'fundamentals']
-      },
-      {
-        id: 'min-max-heaps',
-        title: 'Min Heaps and Max Heaps',
-        description: 'Understanding min heaps, max heaps and their implementation.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 14,
-        difficulty: 'Intermediate',
-        tags: ['heaps', 'types']
-      },
-      {
-        id: 'priority-queues',
-        title: 'Priority Queues',
-        description: 'Implementing and using priority queues with heaps.',
-        videoUrl: 'https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4',
-        duration: 15,
-        difficulty: 'Intermediate',
-        tags: ['heaps', 'priority-queues']
+        tags: ['heaps', 'fundamentals'],
+        sections: [
+          {
+            title: "What are Heaps?",
+            content: "A heap is a specialized tree-based data structure that satisfies the heap property. For a max heap, the key at the parent is greater than or equal to those of its children. For a min heap, the key at the parent is less than or equal to those of its children."
+          },
+          {
+            title: "Binary Heaps",
+            content: "A binary heap is a complete binary tree where each level is completely filled except possibly the lowest level, which is filled from left to right. Binary heaps are commonly implemented using arrays."
+          },
+          {
+            title: "Applications",
+            content: "Heaps are widely used in priority queues, heap sort, graph algorithms like Dijkstra's algorithm, and in systems where quick access to the minimum or maximum element is required."
+          }
+        ]
       }
     ]
   }

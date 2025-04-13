@@ -3,10 +3,14 @@ export interface Lesson {
   id: string;
   title: string;
   description: string;
-  videoUrl: string;
+  imageUrl: string;
   duration: number; // in minutes
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
   tags: string[];
+  sections?: {
+    title: string;
+    content: string;
+  }[];
 }
 
 export interface CodingChallenge {

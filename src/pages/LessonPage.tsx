@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ChevronLeft, BookOpen, Code, ListChecks } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import VideoPlayer from '@/components/VideoPlayer';
+import DocumentedLesson from '@/components/VideoPlayer';
 import CodeEditor from '@/components/CodeEditor';
 import LessonNavigation from '@/components/LessonNavigation';
 import Navigation from '@/components/Navigation';
@@ -45,6 +45,27 @@ const LessonPage = () => {
       </div>
     );
   }
+
+  // Create documented lesson content
+  const documentedContent = {
+    title: lesson.title,
+    imageUrl: lesson.imageUrl,
+    description: lesson.description,
+    sections: lesson.sections || [
+      {
+        title: "Overview",
+        content: lesson.description
+      },
+      {
+        title: "Key Concepts",
+        content: `This lesson covers important concepts related to ${parentTopic.title.toLowerCase()}, with a specific focus on ${lesson.title.toLowerCase()}.`
+      },
+      {
+        title: "Implementation",
+        content: "Code implementation details and examples will be shown here."
+      }
+    ]
+  };
 
   const handleCompleteLessonClick = () => {
     toast.success(`${lesson.title} completed!`, {
@@ -103,15 +124,11 @@ const LessonPage = () => {
           </TabsList>
           
           <TabsContent value="lesson" className="space-y-6">
-            <VideoPlayer 
-              videoUrl={lesson.videoUrl} 
-              title={lesson.title}
+            <DocumentedLesson 
+              content={documentedContent}
             />
             
             <div className="prose prose-slate dark:prose-invert max-w-none">
-              <h2>Description</h2>
-              <p>{lesson.description}</p>
-              
               <h2>What You'll Learn</h2>
               <ul>
                 <li>Understanding the core concepts of {lesson.title}</li>
@@ -119,12 +136,6 @@ const LessonPage = () => {
                 <li>Time and space complexity analysis</li>
                 <li>Real-world applications and examples</li>
               </ul>
-              
-              <h2>Key Concepts</h2>
-              <p>
-                This lesson covers important concepts related to {parentTopic.title.toLowerCase()}, with a specific focus on {lesson.title.toLowerCase()}.
-                You'll learn how to implement these concepts in code and understand the underlying principles.
-              </p>
             </div>
             
             <div className="flex justify-center mt-8">
