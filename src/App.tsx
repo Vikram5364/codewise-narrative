@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import LessonPage from "./pages/LessonPage";
 import CoursesPage from "./pages/CoursesPage";
 import ChallengesPage from "./pages/ChallengesPage";
+import AchievementsPage from "./pages/AchievementsPage";
+import StatsPage from "./pages/StatsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +27,8 @@ const App = () => (
             <Route path="/lesson/:lessonId" element={<LessonPage />} />
             <Route path="/courses" element={<CoursesPage />} />
             <Route path="/challenges" element={<ChallengesPage />} />
+            <Route path="/achievements" element={<AchievementsPage />} />
+            <Route path="/stats" element={<StatsPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
-import { Play, ArrowRight, BookOpen, Code, Award, BarChart } from 'lucide-react';
+import { Play, ArrowRight, BookOpen, Code, Award, BarChart3 } from 'lucide-react';
 import { topics, userProgressSample } from '@/data/sampleData';
 import { Link } from 'react-router-dom';
 
@@ -57,9 +57,11 @@ const Dashboard: React.FC = () => {
             ) : (
               <div className="text-center py-6">
                 <p className="text-muted-foreground">No lesson in progress</p>
-                <Button variant="outline" className="mt-2">
-                  Start Learning
-                </Button>
+                <Link to="/courses">
+                  <Button variant="outline" className="mt-2">
+                    Start Learning
+                  </Button>
+                </Link>
               </div>
             )}
           </CardContent>
@@ -130,7 +132,7 @@ const Dashboard: React.FC = () => {
                   className="h-1"
                 />
               </div>
-              <Link to={`/topic/${topic.id}`}>
+              <Link to={`/lesson/${topic.lessons[0].id}`}>
                 <Button variant="ghost" className="w-full mt-4 gap-1">
                   View Topic <ArrowRight className="h-4 w-4" />
                 </Button>
@@ -152,9 +154,11 @@ const Dashboard: React.FC = () => {
             <p className="text-sm text-muted-foreground mb-4">
               Test your skills with our coding challenges
             </p>
-            <Button variant="outline" className="w-full">
-              View Challenges
-            </Button>
+            <Link to="/challenges">
+              <Button variant="outline" className="w-full">
+                View Challenges
+              </Button>
+            </Link>
           </CardContent>
         </Card>
         
@@ -169,16 +173,18 @@ const Dashboard: React.FC = () => {
             <p className="text-sm text-muted-foreground mb-4">
               Track your learning achievements
             </p>
-            <Button variant="outline" className="w-full">
-              View Achievements
-            </Button>
+            <Link to="/achievements">
+              <Button variant="outline" className="w-full">
+                View Achievements
+              </Button>
+            </Link>
           </CardContent>
         </Card>
         
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <BarChart className="h-5 w-5 text-primary" />
+              <BarChart3 className="h-5 w-5 text-primary" />
               Your Stats
             </CardTitle>
           </CardHeader>
@@ -186,9 +192,11 @@ const Dashboard: React.FC = () => {
             <p className="text-sm text-muted-foreground mb-4">
               View your learning statistics
             </p>
-            <Button variant="outline" className="w-full">
-              View Stats
-            </Button>
+            <Link to="/stats">
+              <Button variant="outline" className="w-full">
+                View Stats
+              </Button>
+            </Link>
           </CardContent>
         </Card>
       </div>
