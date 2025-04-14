@@ -1,3 +1,4 @@
+
 import { Topic, Lesson, CodingChallenge, UserProgress, TestCase } from '../types';
 
 // Sample user progress data
@@ -685,4 +686,98 @@ export const topics: Topic[] = [
       },
       {
         id: 'avl-trees',
-        title
+        title: 'AVL Trees',
+        description: 'Learn about self-balancing AVL trees and their implementation.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 15,
+        difficulty: 'Advanced',
+        tags: ['trees', 'avl', 'balanced']
+      }
+    ]
+  },
+  {
+    id: 'graphs',
+    title: 'Graphs',
+    description: 'Master graph algorithms and representations.',
+    icon: 'network',
+    lessons: [
+      {
+        id: 'graphs-intro',
+        title: 'Introduction to Graphs',
+        description: 'Learn the basics of graph theory and representations.',
+        imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+        duration: 12,
+        difficulty: 'Intermediate',
+        tags: ['graphs', 'fundamentals']
+      }
+    ]
+  },
+  {
+    id: 'hash-tables',
+    title: 'Hash Tables',
+    description: 'Learn about efficient key-value storage with hash tables.',
+    icon: 'hash',
+    lessons: [
+      {
+        id: 'hash-tables-intro',
+        title: 'Introduction to Hash Tables',
+        description: 'Learn how hash tables provide efficient data access.',
+        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+        duration: 10,
+        difficulty: 'Intermediate',
+        tags: ['hash-tables', 'fundamentals']
+      }
+    ]
+  },
+  {
+    id: 'sorting',
+    title: 'Sorting Algorithms',
+    description: 'Explore various sorting algorithms and their complexity.',
+    icon: 'sort-asc',
+    lessons: [
+      {
+        id: 'bubble-sort',
+        title: 'Bubble Sort',
+        description: 'Learn the simplest sorting algorithm: bubble sort.',
+        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+        duration: 8,
+        difficulty: 'Beginner',
+        tags: ['sorting', 'algorithms']
+      }
+    ]
+  },
+  {
+    id: 'dp',
+    title: 'Dynamic Programming',
+    description: 'Master dynamic programming for complex optimization problems.',
+    icon: 'sigma',
+    lessons: [
+      {
+        id: 'dp-intro',
+        title: 'Introduction to Dynamic Programming',
+        description: 'Learn the fundamental concepts of dynamic programming.',
+        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+        duration: 16,
+        difficulty: 'Advanced',
+        tags: ['dp', 'algorithms']
+      }
+    ]
+  },
+  {
+    id: 'heaps',
+    title: 'Heaps',
+    description: 'Understand heap data structures and their applications.',
+    icon: 'stacked-bar-chart',
+    lessons: [
+      {
+        id: 'heaps-intro',
+        title: 'Introduction to Heaps',
+        description: 'Learn about binary heaps and priority queues.',
+        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+        duration: 11,
+        difficulty: 'Intermediate',
+        tags: ['heaps', 'binary-heaps']
+      }
+    ]
+  }
+];
