@@ -1,4 +1,3 @@
-
 import { Topic, Lesson, CodingChallenge, UserProgress, TestCase } from '../types';
 
 // Sample user progress data
@@ -686,76 +685,4 @@ export const topics: Topic[] = [
       },
       {
         id: 'avl-trees',
-        title: 'AVL Trees',
-        description: 'Self-balancing binary search trees for efficient operations.',
-        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
-        duration: 15,
-        difficulty: 'Advanced',
-        tags: ['trees', 'avl', 'balanced']
-      },
-      {
-        id: 'red-black-trees',
-        title: 'Red-Black Trees',
-        description: 'Another type of self-balancing binary search tree.',
-        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-        duration: 16,
-        difficulty: 'Advanced',
-        tags: ['trees', 'red-black', 'balanced']
-      },
-      {
-        id: 'b-trees',
-        title: 'B-Trees',
-        description: 'Trees optimized for storage systems like databases and file systems.',
-        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-        duration: 15,
-        difficulty: 'Advanced',
-        tags: ['trees', 'b-trees', 'databases']
-      },
-      {
-        id: 'tree-traversal',
-        title: 'Tree Traversal Algorithms',
-        description: 'Different ways to visit all nodes in a tree.',
-        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
-        duration: 13,
-        difficulty: 'Intermediate',
-        tags: ['trees', 'traversal', 'algorithms']
-      },
-      {
-        id: 'trie-data-structure',
-        title: 'Trie Data Structure',
-        description: 'Tree structure used for efficient string operations.',
-        imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
-        duration: 14,
-        difficulty: 'Intermediate',
-        tags: ['trees', 'trie', 'strings']
-      },
-      {
-        id: 'segment-trees',
-        title: 'Segment Trees',
-        description: 'Trees for efficiently querying ranges in an array.',
-        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
-        duration: 18,
-        difficulty: 'Advanced',
-        tags: ['trees', 'segment-trees', 'range-queries']
-      },
-      {
-        id: 'binary-indexed-trees',
-        title: 'Binary Indexed Trees (Fenwick Trees)',
-        description: 'Efficient data structure for cumulative frequency tables.',
-        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-        duration: 15,
-        difficulty: 'Advanced',
-        tags: ['trees', 'fenwick', 'cumulative']
-      },
-      {
-        id: 'tree-balancing',
-        title: 'Tree Balancing Techniques',
-        description: 'Methods to maintain balance in tree structures.',
-        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-        duration: 14,
-        difficulty: 'Advanced',
-        tags: ['trees', 'balancing', 'performance']
-      }
-    ]
-  }
-];
+        title
