@@ -1,5 +1,94 @@
 import { Topic, Lesson, CodingChallenge, UserProgress, TestCase } from '../types';
 
+// Sample user progress data
+export const userProgressSample: UserProgress = {
+  completedLessons: ['arrays-intro', 'array-operations', 'linked-lists-intro'],
+  completedChallenges: ['challenge-1', 'challenge-2'],
+  currentLesson: 'array-searching'
+};
+
+// Sample coding challenge data
+export const challenges: CodingChallenge[] = [
+  {
+    id: 'challenge-1',
+    lessonId: 'arrays-intro',
+    title: 'Reverse an Array',
+    description: 'Write a function to reverse the elements of an array in-place.',
+    starterCode: 'function reverseArray(arr) {\n  // Your code here\n  \n  return arr;\n}',
+    language: 'javascript',
+    difficulty: 'Easy',
+    testCases: [
+      {
+        input: '[1, 2, 3, 4, 5]',
+        expectedOutput: '[5, 4, 3, 2, 1]',
+        isHidden: false
+      },
+      {
+        input: '["apple", "banana", "cherry"]',
+        expectedOutput: '["cherry", "banana", "apple"]',
+        isHidden: false
+      },
+      {
+        input: '[true, false, true]',
+        expectedOutput: '[true, false, true]',
+        isHidden: true
+      }
+    ]
+  },
+  {
+    id: 'challenge-2',
+    lessonId: 'array-operations',
+    title: 'Find Max Element',
+    description: 'Write a function to find the maximum element in an array.',
+    starterCode: 'function findMax(arr) {\n  // Your code here\n  \n  return 0;\n}',
+    language: 'javascript',
+    difficulty: 'Easy',
+    testCases: [
+      {
+        input: '[1, 2, 3, 4, 5]',
+        expectedOutput: '5',
+        isHidden: false
+      },
+      {
+        input: '[-1, -5, -3, -2]',
+        expectedOutput: '-1',
+        isHidden: false
+      },
+      {
+        input: '[10, 10, 10]',
+        expectedOutput: '10',
+        isHidden: true
+      }
+    ]
+  },
+  {
+    id: 'challenge-3',
+    lessonId: 'array-searching',
+    title: 'Binary Search Implementation',
+    description: 'Implement binary search to find an element in a sorted array.',
+    starterCode: 'function binarySearch(arr, target) {\n  // Your code here\n  // Return index of target or -1 if not found\n  \n  return -1;\n}',
+    language: 'javascript',
+    difficulty: 'Medium',
+    testCases: [
+      {
+        input: '[[1, 2, 3, 4, 5], 3]',
+        expectedOutput: '2',
+        isHidden: false
+      },
+      {
+        input: '[[1, 3, 5, 7, 9], 5]',
+        expectedOutput: '2',
+        isHidden: false
+      },
+      {
+        input: '[[2, 4, 6, 8, 10, 12], 7]',
+        expectedOutput: '-1',
+        isHidden: true
+      }
+    ]
+  }
+];
+
 export const topics: Topic[] = [
   {
     id: 'arrays',
@@ -596,54 +685,4 @@ export const topics: Topic[] = [
       },
       {
         id: 'avl-trees',
-        title: 'AVL Trees',
-        description: 'Self-balancing binary search trees for efficient operations.',
-        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
-        duration: 15,
-        difficulty: 'Advanced',
-        tags: ['trees', 'avl', 'balanced']
-      },
-      {
-        id: 'red-black-trees',
-        title: 'Red-Black Trees',
-        description: 'Another type of self-balancing binary search tree.',
-        imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-        duration: 16,
-        difficulty: 'Advanced',
-        tags: ['trees', 'red-black', 'balanced']
-      },
-      {
-        id: 'b-trees',
-        title: 'B-Trees',
-        description: 'Trees optimized for storage systems like databases and file systems.',
-        imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-        duration: 15,
-        difficulty: 'Advanced',
-        tags: ['trees', 'b-trees', 'databases']
-      },
-      {
-        id: 'tree-traversal',
-        title: 'Tree Traversal Algorithms',
-        description: 'Different ways to visit all nodes in a tree.',
-        imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
-        duration: 13,
-        difficulty: 'Intermediate',
-        tags: ['trees', 'traversal', 'algorithms']
-      },
-      {
-        id: 'trie-data-structure',
-        title: 'Trie Data Structure',
-        description: 'Tree structure used for efficient string operations.',
-        imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
-        duration: 14,
-        difficulty: 'Intermediate',
-        tags: ['trees', 'trie', 'strings']
-      },
-      {
-        id: 'segment-trees',
-        title: 'Segment Trees',
-        description: 'Trees for efficiently querying ranges in an array.',
-        imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
-        duration: 18,
-        difficulty: 'Advanced',
-        tags: ['trees', '
+        title
